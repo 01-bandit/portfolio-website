@@ -21,7 +21,7 @@ function Projects() {
       tech: ['React', 'Node.js', 'Socket.io', 'Web Crypto API', 'MongoDB'],
       category: 'personal',
       type: 'Personal Project',
-      github: 'https://github.com/01-bandit/secureChat',
+      github: 'https://github.com/01-bandit/SecureChat',
       icon: '🔐'
     },
     {
@@ -51,15 +51,6 @@ function Projects() {
       github: 'https://github.com/01-bandit/Weather-Dashboard',
       icon: '🌤️'
     },
-    {
-      title: 'Enchanted Labyrinth Explorer',
-      description: 'Object-oriented game featuring advanced game mechanics, design patterns, and Java GUI development.',
-      tech: ['Java', 'OOP', 'Game Development'],
-      category: 'academic',
-      type: 'FAST University Semester Project',
-      github: 'https://github.com/01-bandit/finalproject',
-      icon: '🎮'
-    }
   ]
 
   const filteredProjects = filter === 'all' 
