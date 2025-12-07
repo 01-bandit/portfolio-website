@@ -65,15 +65,15 @@ function Certifications() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-primary dark:text-white text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white text-center mb-4">
             Certifications & Coursework
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto">
             Academic achievements and specialized training in software development
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
@@ -82,32 +82,32 @@ function Certifications() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all"
+              className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-4 md:p-6 border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <span className="text-4xl">{cert.icon}</span>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-primary dark:text-white mb-2">
+              <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
+                <span className="text-3xl md:text-4xl flex-shrink-0">{cert.icon}</span>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg md:text-xl font-bold text-primary dark:text-white mb-1 md:mb-2 break-words">
                     {cert.title}
                   </h3>
-                  <p className="text-secondary dark:text-blue-400 font-semibold mb-1">
+                  <p className="text-sm md:text-base text-secondary dark:text-blue-400 font-semibold mb-1 break-words">
                     {cert.issuer}
                   </p>
-                  <span className="inline-block px-3 py-1 bg-primary/10 dark:bg-secondary/20 text-primary dark:text-blue-400 text-xs font-semibold rounded-full">
+                  <span className="inline-block px-2 md:px-3 py-1 bg-primary/10 dark:bg-secondary/20 text-primary dark:text-blue-400 text-xs font-semibold rounded-full">
                     {cert.date}
                   </span>
                 </div>
               </div>
 
-              <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm leading-relaxed">
+              <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-3 md:mb-4 leading-relaxed break-words">
                 {cert.description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 md:gap-2">
                 {cert.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-gradient-to-r from-primary/20 to-secondary/20 dark:from-blue-500/20 dark:to-blue-400/20 text-primary dark:text-blue-400 text-xs rounded-full font-medium"
+                    className="px-2 md:px-3 py-0.5 md:py-1 bg-gradient-to-r from-primary/20 to-secondary/20 dark:from-blue-500/20 dark:to-blue-400/20 text-primary dark:text-blue-400 text-xs rounded-full font-medium whitespace-nowrap"
                   >
                     {skill}
                   </span>
@@ -123,7 +123,7 @@ function Certifications() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8 md:mt-12"
         >
           {[
             { label: 'Courses Completed', value: '25+', icon: '📚' },
@@ -133,13 +133,13 @@ function Certifications() {
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 text-center border border-gray-100 dark:border-gray-700"
+              className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 md:p-6 text-center border border-gray-100 dark:border-gray-700"
             >
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-bold text-primary dark:text-white mb-1">
+              <div className="text-2xl md:text-3xl mb-2">{stat.icon}</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-1">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 break-words">
                 {stat.label}
               </div>
             </div>

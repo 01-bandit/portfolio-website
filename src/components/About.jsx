@@ -11,7 +11,7 @@ function About() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-6"
         >
-          <h2 className="text-4xl font-bold text-primary dark:text-white mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-8 md:mb-12">
             About Me
           </h2>
           
@@ -20,25 +20,25 @@ function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-xl p-8 text-left border border-gray-100 dark:border-gray-700"
+            className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-xl p-4 md:p-8 text-left border border-gray-100 dark:border-gray-700"
           >
-            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-              <p>
+            <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="break-words">
                 👋 Hi! I'm a passionate Software Engineering student from Islamabad, Pakistan, 
                 with a keen interest in full-stack development, AI/ML, and building innovative software solutions.
               </p>
-              <p>
+              <p className="break-words">
                 💡 <strong className="text-primary dark:text-blue-400">Honest Background:</strong> I'm currently studying at FAST-NUCES and haven't worked 
                 in a production environment yet. My technical skills come from university coursework, semester projects, 
                 and personal exploration. I'm eager to learn industry best practices and transition from academic 
                 projects to real-world applications.
               </p>
-              <p>
+              <p className="break-words">
                 🚀 <strong className="text-primary dark:text-blue-400">What Drives Me:</strong> I love the challenge of solving complex problems through code. 
                 Whether it's implementing end-to-end encryption, building interactive web applications, or exploring 
                 data structures, I approach each project as an opportunity to learn something new.
               </p>
-              <p>
+              <p className="break-words">
                 🎯 <strong className="text-primary dark:text-blue-400">Currently:</strong> Working with React, Node.js, Django, PostgreSQL, and MongoDB through 
                 university assignments and side projects. Always exploring new technologies and frameworks to expand my toolkit.
               </p>
@@ -51,7 +51,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid md:grid-cols-3 gap-6 mt-12"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12"
           >
             {[
               { icon: '🎓', title: 'Education', desc: 'BS Software Engineering' },
@@ -60,11 +60,11 @@ function About() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 md:p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow"
               >
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h4 className="text-lg font-bold text-primary dark:text-white mb-2">{item.title}</h4>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">{item.desc}</p>
+                <div className="text-3xl md:text-4xl mb-2 md:mb-3">{item.icon}</div>
+                <h4 className="text-base md:text-lg font-bold text-primary dark:text-white mb-1 md:mb-2">{item.title}</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm">{item.desc}</p>
               </div>
             ))}
           </motion.div>

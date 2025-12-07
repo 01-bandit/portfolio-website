@@ -47,14 +47,14 @@ function Hero() {
 
         <motion.h1 
           variants={itemVariants}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary dark:text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-primary dark:text-white mb-4 md:mb-6 px-4 break-words"
         >
           Muhammad Hammad ur Rehman
         </motion.h1>
 
         <motion.div 
           variants={itemVariants}
-          className="text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 mb-8 h-20"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 mb-6 md:mb-8 h-16 sm:h-20 px-4"
         >
           <TypeAnimation
             sequence={[
@@ -76,7 +76,7 @@ function Hero() {
 
         <motion.p 
           variants={itemVariants}
-          className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12"
+          className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 md:mb-12 px-4"
         >
           Passionate about building innovative web applications and solving complex problems.
           Currently studying at FAST-NUCES, exploring the intersection of technology and creativity.
@@ -84,17 +84,17 @@ function Hero() {
 
         <motion.div 
           variants={itemVariants}
-          className="flex flex-wrap justify-center gap-4"
+          className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 px-4"
         >
           <a 
             href="#projects"
-            className="px-8 py-4 bg-primary dark:bg-secondary text-white rounded-lg font-semibold hover:bg-secondary dark:hover:bg-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="px-6 md:px-8 py-3 md:py-4 bg-primary dark:bg-secondary text-white rounded-lg font-semibold hover:bg-secondary dark:hover:bg-primary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
           >
             View Projects
           </a>
           <a 
             href="#contact"
-            className="px-8 py-4 bg-white dark:bg-gray-800 text-primary dark:text-white border-2 border-primary dark:border-secondary rounded-lg font-semibold hover:bg-primary hover:text-white dark:hover:bg-secondary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="px-6 md:px-8 py-3 md:py-4 bg-white dark:bg-gray-800 text-primary dark:text-white border-2 border-primary dark:border-secondary rounded-lg font-semibold hover:bg-primary hover:text-white dark:hover:bg-secondary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
           >
             Get In Touch
           </a>

@@ -50,20 +50,20 @@ function Education() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white dark:bg-gray-900 border-l-4 border-secondary rounded-lg shadow-lg p-6 hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700"
             >
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary dark:text-white mb-2">
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4 gap-2">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl md:text-2xl font-bold text-primary dark:text-white mb-2 break-words">
                     {edu.degree}
                   </h3>
-                  <p className="text-lg text-gray-700 dark:text-gray-300 font-medium">
+                  <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 font-medium break-words">
                     {edu.institution}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
                     📍 {edu.location}
                   </p>
                 </div>
-                <div className="mt-2 md:mt-0">
-                  <span className="inline-block bg-primary/10 dark:bg-secondary/20 text-primary dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="mt-2 lg:mt-0 flex-shrink-0">
+                  <span className="inline-block bg-primary/10 dark:bg-secondary/20 text-primary dark:text-blue-400 px-3 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-sm font-semibold">
                     {edu.period}
                   </span>
                 </div>
@@ -96,15 +96,15 @@ function Education() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 bg-gradient-to-r from-primary to-secondary dark:from-blue-600 dark:to-blue-400 rounded-lg shadow-lg p-8 text-white"
         >
-          <h3 className="text-2xl font-bold mb-4">Academic Approach</h3>
-          <p className="text-lg leading-relaxed">
+          <h3 className="text-xl md:text-2xl font-bold mb-4">Academic Approach</h3>
+          <p className="text-base md:text-lg leading-relaxed">
             My education at FAST-NUCES emphasizes practical, hands-on learning. Every course includes 
             substantial project work where we implement real-world applications. While I don't have 
             professional work experience yet, I've completed numerous semester projects that mirror 
             industry scenarios - from building secure chat applications with end-to-end encryption to 
             developing full-stack web platforms with authentication systems.
           </p>
-          <p className="mt-4 text-lg leading-relaxed">
+          <p className="mt-4 text-base md:text-lg leading-relaxed">
             I'm now looking to bridge the gap between academic learning and production environments, 
             bringing strong fundamentals and a genuine enthusiasm for learning industry best practices.
           </p>
