@@ -10,7 +10,7 @@ import Experience from './components/Experience'
 import Certifications from './components/Certifications'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
-import Resume from './components/Resume'
+//import Resume from './components/Resume'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
 import ScrollProgress from './components/ScrollProgress'
@@ -45,7 +45,7 @@ function App() {
             <Certifications />
             <Skills />
             <Projects />
-            <Resume />
+            {/*<Resume />*/}
             <Contact />
           </main>
           <footer className="bg-primary dark:bg-gray-900 text-white py-6 text-center border-t border-gray-200 dark:border-gray-800">
