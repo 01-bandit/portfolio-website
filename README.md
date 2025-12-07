@@ -4,7 +4,7 @@ A minimalistic, responsive portfolio website built with React, Vite, and Tailwin
 
 ## 🚀 Live Demo
 
-[View Live Site](https://your-deployment-url.vercel.app) *(Update after deployment)*
+[View Live Site](https://muhammad-hammad-ur-rehman.vercel.app/)
 
 ## 📸 Preview
 
