@@ -6,9 +6,37 @@ function Projects() {
 
   const projects = [
     {
+      title: 'AI Voice Calling Agent',
+      description: 'Outbound AI calling agent with automated lead generation pipeline. Built n8n workflow integrating Waalaxy, LinkedIn scraping, Apollo, VAPI, and Retell AI. Extracted and fine-tuned dataset from real closer recordings to replicate human-like sales conversations.',
+      tech: ['n8n', 'VAPI', 'Retell AI', 'Apollo', 'Dataset Extraction', 'Fine-tuning'],
+      category: 'personal',
+      type: 'Work in Progress',
+      github: '',
+      icon: '📞',
+      highlight: true
+    },
+    {
+      title: 'SecureChat',
+      description: 'End-to-end encrypted messaging application implementing ECDH key exchange, AES-256-GCM encryption, and real-time messaging with Socket.io. Built for Information Security course.',
+      tech: ['React', 'Node.js', 'Socket.io', 'Web Crypto API', 'MongoDB'],
+      category: 'personal',
+      type: 'Personal Project',
+      github: 'https://github.com/01-bandit/secureChat',
+      icon: '🔐'
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'Modern, responsive portfolio with dark mode, animations, CI/CD pipeline, and automated deployment. Built with React, Vite, Tailwind CSS, and Framer Motion.',
+      tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite', 'CI/CD'],
+      category: 'personal',
+      type: 'Personal Project',
+      github: 'https://github.com/01-bandit/portfolio-website',
+      icon: '🌐'
+    },
+    {
       title: '2D Chess Game',
-      description: 'Programming Fundamentals semester project implementing a complete chess game with game logic and UI.',
-      tech: ['C++', 'OOP'],
+      description: 'Complete chess implementation with game logic, move validation, and graphical UI built in C++ for Programming Fundamentals course.',
+      tech: ['C++', 'OOP', 'Game Logic'],
       category: 'academic',
       type: 'FAST University Semester Project',
       github: 'https://github.com/01-bandit/PF-Project',
@@ -16,7 +44,7 @@ function Projects() {
     },
     {
       title: 'Weather Dashboard',
-      description: 'Web Engineering assignment featuring real-time weather data visualization with API integration.',
+      description: 'Interactive weather application with real-time data visualization and API integration for Web Engineering assignment.',
       tech: ['JavaScript', 'HTML/CSS', 'Weather API'],
       category: 'academic',
       type: 'FAST University Assignment',
@@ -25,30 +53,12 @@ function Projects() {
     },
     {
       title: 'Enchanted Labyrinth Explorer',
-      description: 'Object-Oriented Programming project featuring game mechanics and design patterns.',
+      description: 'Object-oriented game featuring advanced game mechanics, design patterns, and Java GUI development.',
       tech: ['Java', 'OOP', 'Game Development'],
       category: 'academic',
       type: 'FAST University Semester Project',
       github: 'https://github.com/01-bandit/finalproject',
       icon: '🎮'
-    },
-    {
-      title: 'SecureChat',
-      description: 'Real-time encrypted chat application with secure messaging features and user authentication.',
-      tech: ['React', 'Node.js', 'Socket.io', 'Encryption'],
-      category: 'personal',
-      type: 'Personal Project',
-      github: 'https://github.com/01-bandit/secureChat',
-      icon: '💬'
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'Modern, responsive portfolio built with React, Vite, and Tailwind CSS showcasing web engineering concepts.',
-      tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-      category: 'personal',
-      type: 'Personal Project',
-      github: 'https://github.com/01-bandit/portfolio-website',
-      icon: '🌐'
     }
   ]
 
@@ -109,8 +119,19 @@ function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-700"
+              className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all border ${
+                project.highlight 
+                  ? 'border-secondary dark:border-blue-400 ring-2 ring-secondary/20 dark:ring-blue-400/20' 
+                  : 'border-gray-100 dark:border-gray-700'
+              }`}
             >
+              {project.highlight && (
+                <div className="mb-3">
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-secondary to-blue-500 text-white text-xs font-bold rounded-full">
+                    ⭐ FEATURED PROJECT
+                  </span>
+                </div>
+              )}
               <div className="flex justify-between items-start mb-3">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">{project.icon}</span>
@@ -118,17 +139,19 @@ function Projects() {
                     {project.title}
                   </h3>
                 </div>
-                <a 
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-secondary dark:text-blue-400 hover:text-primary dark:hover:text-blue-300 transition-colors"
-                  aria-label="View on GitHub"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
-                </a>
+                {project.github && (
+                  <a 
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-secondary dark:text-blue-400 hover:text-primary dark:hover:text-blue-300 transition-colors"
+                    aria-label="View on GitHub"
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                  </a>
+                )}
               </div>
               
               <p className="text-sm text-secondary dark:text-blue-400 font-semibold mb-3">

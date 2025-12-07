@@ -15,28 +15,44 @@ function Certifications() {
       skills: ['Python', 'Data Structures', 'Web Scraping', 'SQL']
     },
     {
+      title: 'Information Security',
+      issuer: 'FAST-NUCES',
+      date: 'Fall 2025',
+      description: 'Comprehensive security course covering cryptography, network security, secure software development, and attack/defense techniques. Built SecureChat with E2E encryption.',
+      icon: '🔐',
+      skills: ['Cryptography', 'E2E Encryption', 'Security', 'ECDH/AES-GCM']
+    },
+    {
       title: 'Web Engineering',
       issuer: 'FAST-NUCES',
-      date: '2024',
-      description: 'Advanced web development course covering React, Node.js, REST APIs, and modern web architecture.',
+      date: 'Fall 2024',
+      description: 'Full-stack web development covering React, Node.js, REST APIs, and modern web architecture with hands-on projects.',
       icon: '🌐',
       skills: ['React', 'Node.js', 'REST APIs', 'MongoDB']
     },
     {
       title: 'Database Systems',
       issuer: 'FAST-NUCES',
-      date: '2024',
-      description: 'In-depth study of database design, SQL, normalization, query optimization, and DBMS fundamentals.',
+      date: 'Fall 2024',
+      description: 'Advanced database design, SQL optimization, normalization, transactions, and distributed database systems.',
       icon: '🗄️',
-      skills: ['SQL', 'PostgreSQL', 'Database Design', 'Normalization']
+      skills: ['PostgreSQL', 'SQL', 'Database Design', 'Query Optimization']
     },
     {
-      title: 'Information Security',
+      title: 'Software Construction & Development',
       issuer: 'FAST-NUCES',
-      date: '2024',
-      description: 'Security fundamentals including cryptography, network security, authentication, and secure coding practices.',
-      icon: '🔐',
-      skills: ['Cryptography', 'Security', 'Authentication', 'Encryption']
+      date: 'Spring 2025',
+      description: 'Software engineering best practices, design patterns, testing, CI/CD, and collaborative development workflows.',
+      icon: '⚙️',
+      skills: ['Design Patterns', 'Testing', 'CI/CD', 'Agile']
+    },
+    {
+      title: 'MLOps',
+      issuer: 'FAST-NUCES',
+      date: 'Fall 2025',
+      description: 'Machine Learning Operations covering model deployment, monitoring, versioning, and production ML workflows.',
+      icon: '🤖',
+      skills: ['ML Deployment', 'Model Monitoring', 'MLOps', 'Automation']
     }
   ]
 
@@ -110,10 +126,10 @@ function Certifications() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
         >
           {[
-            { label: 'Courses Completed', value: '15+', icon: '📚' },
-            { label: 'Projects Built', value: '20+', icon: '🚀' },
-            { label: 'Technologies Learned', value: '25+', icon: '⚡' },
-            { label: 'Current CGPA', value: '3.5+', icon: '🎯' }
+            { label: 'Courses Completed', value: '25+', icon: '📚' },
+            { label: 'Projects Built', value: '15+', icon: '🚀' },
+            { label: 'Technologies Learned', value: '12+', icon: '⚡' },
+            { label: 'Current CGPA', value: '2.15', icon: '🎯' }
           ].map((stat, index) => (
             <div
               key={index}
