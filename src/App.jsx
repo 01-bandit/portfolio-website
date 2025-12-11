@@ -1,21 +1,22 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import ErrorBoundary from './components/ErrorBoundary'
 import Loading from './components/Loading'
 import SkipLink from './components/SkipLink'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import About from './components/About'
-import Education from './components/Education'
-import Experience from './components/Experience'
-import Certifications from './components/Certifications'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-//import Resume from './components/Resume'
-import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
 import ScrollProgress from './components/ScrollProgress'
 import BackToTop from './components/BackToTop'
+
+// Lazy load heavy components that are below the fold
+const About = lazy(() => import('./components/About'))
+const Education = lazy(() => import('./components/Education'))
+const Experience = lazy(() => import('./components/Experience'))
+const Certifications = lazy(() => import('./components/Certifications'))
+const Skills = lazy(() => import('./components/Skills'))
+const Projects = lazy(() => import('./components/Projects'))
+const Contact = lazy(() => import('./components/Contact'))
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -41,14 +42,15 @@ function App() {
           <Header />
           <main id="main-content" tabIndex="-1">
             <Hero />
-            <About />
-            <Education />
-            <Experience />
-            <Certifications />
-            <Skills />
-            <Projects />
-            {/*<Resume />*/}
-            <Contact />
+            <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+              <About />
+              <Education />
+              <Experience />
+              <Certifications />
+              <Skills />
+              <Projects />
+              <Contact />
+            </Suspense>
           </main>
           <footer 
             className="bg-primary dark:bg-gray-900 text-white py-6 text-center border-t border-gray-200 dark:border-gray-800"
